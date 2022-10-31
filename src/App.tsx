@@ -2,11 +2,9 @@ import { ThirdwebNftMedia, useContract, useContractMetadata, useNFTs } from "@th
 import "./styles/Home.css";
 
 export default function Home() {
-  const { contract } = useContract('0x06Df1a3dfeb3BfBdAaC675F7eDC7541Dc01060F7');
+  const { contract } = useContract('0x73A236dF9b63ea5aB9baaC4BdA2Fc5B93A849425');
   const { data: metadata, isLoading: loadingMetadata } = useContractMetadata(contract);
   const { data: nfts, isLoading } = useNFTs(contract);
-
-  console.log(metadata);
 
   return (
     <main className="container">
